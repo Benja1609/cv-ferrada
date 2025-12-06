@@ -1,0 +1,77 @@
+/* Animaciones personalizadas */
+@keyframes wave {
+    0% { transform: translateX(0) translateZ(0) scaleY(1); }
+    50% { transform: translateX(-25%) translateZ(0) scaleY(0.8); }
+    100% { transform: translateX(-50%) translateZ(0) scaleY(1); }
+}
+.animate-wave {
+    animation: wave 15s linear infinite;
+}
+
+@keyframes grid-horizontal {
+    0% { transform: scaleX(0); opacity: 0; }
+    50% { transform: scaleX(1); opacity: 0.5; }
+    100% { transform: scaleX(0); opacity: 0; }
+}
+.animate-grid-horizontal {
+    animation: grid-horizontal linear infinite;
+}
+
+@keyframes grid-vertical {
+    0% { transform: scaleY(0); opacity: 0; }
+    50% { transform: scaleY(1); opacity: 0.5; }
+    100% { transform: scaleY(0); opacity: 0; }
+}
+.animate-grid-vertical {
+    animation: grid-vertical linear infinite;
+}
+
+@keyframes orbit {
+    0% { transform: rotate(0deg) translateX(50px) rotate(0deg); }
+    100% { transform: rotate(360deg) translateX(50px) rotate(-360deg); }
+}
+.animate-orbit { animation: orbit 20s linear infinite; }
+.animate-orbit-reverse { animation: orbit 25s linear infinite reverse; }
+.animate-orbit-slow { animation: orbit 30s linear infinite; }
+.animate-orbit-diagonal { animation: orbit 22s linear infinite; }
+.animate-orbit-diagonal-reverse { animation: orbit 28s linear infinite reverse; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+.animate-float {
+    animation: float ease-in-out infinite;
+}
+
+@keyframes line-up {
+    0% { transform: translateY(100%); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: translateY(-100%); opacity: 0; }
+}
+.animate-line-up { animation: line-up 8s linear infinite; }
+
+@keyframes line-down {
+    0% { transform: translateY(-100%); opacity: 0; }
+    50% { opacity: 0.5; }
+    100% { transform: translateY(100%); opacity: 0; }
+}
+.animate-line-down { animation: line-down 8s linear infinite; }
+
+@keyframes pulse-slow {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(1.1); }
+}
+.animate-pulse-slow { animation: pulse-slow 4s ease-in-out infinite; }
+
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(-5%); animation-timing-function: cubic-bezier(0.8,0,1,1); }
+    50% { transform: translateY(0); animation-timing-function: cubic-bezier(0,0,0.2,1); }
+}
+.animate-bounce-slow { animation: bounce-slow 2s infinite; }
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translate3d(0, 40px, 0); }
+    to { opacity: 1; transform: translate3d(0, 0, 0); }
+}
+.animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
